@@ -1,1 +1,253 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfica LV - Sua Gráfica no Bairro Brisa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for WhatsApp icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #333;
+        }
+        /* Custom styles for a more vibrant, yet balanced look */
+        .gradient-bg {
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Purple to Blue */
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .service-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom style for the banner image to ensure it's responsive and well-placed */
+        .banner-container {
+            width: 100%;
+            overflow: hidden; /* Ensures no overflow if image is slightly larger */
+        }
+        .banner-container img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove extra space below image */
+            object-fit: cover; /* Cover the container while maintaining aspect ratio */
+        }
+        /* WhatsApp Floating Action Button (FAB) styles */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366; /* WhatsApp green */
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+        .whatsapp-fab:hover {
+            background-color: #1DA851; /* Darker green on hover */
+            transform: scale(1.05);
+        }
+        .whatsapp-fab i {
+            font-size: 2.5rem; /* Adjust icon size */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Gráfica LV</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#servicos" class="text-gray-600 hover:text-blue-600 font-medium">Serviços</a></li>
+                    <li><a href="#localizacao" class="text-gray-600 hover:text-blue-600 font-medium">Localização</a></li>
+                    <li><a href="#contato" class="text-gray-600 hover:text-blue-600 font-medium">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="gradient-bg text-white py-20 px-4 text-center rounded-b-lg shadow-lg">
+        <div class="container mx-auto">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-shadow">
+                Cansou de andar quilômetros pra imprimir ou tirar xerox?
+            </h2>
+            <p class="text-2xl sm:text-3xl font-medium">
+                Agora ficou fácil! Chegou no Brisa a <span class="font-bold">Gráfica LV.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Banner Image Section -->
+    <section class="py-8 px-4 bg-white">
+        <div class="container mx-auto banner-container rounded-lg shadow-lg overflow-hidden">
+            <!-- Ensure the image is responsive and fills its container -->
+            <img src="https://raw.githubusercontent.com/Deivisnan/lanhouse_page/16cc618004d03e92a4b2adc5ffbc5e2600c768e3/img/banner_lanhouse_2.png" alt="Banner Lanhouse 2" class="w-full h-auto object-cover">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h3 class="text-4xl font-bold text-center text-gray-800 mb-12">Nossos Serviços Essenciais</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Service Card: Impressões -->
+                <div class="service-card bg-blue-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Printer -->
+                    <svg class="w-16 h-16 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m0 0v1a2 2 0 002 2h2a2 2 0 002-2v-1m-8 0h.01M12 6h.01M12 10h.01m-4 4h.01m-4 0h.01M16 14h.01m-4-8a2 2 0 100-4 2 2 0 000 4z"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Impressões Coloridas e P&B</h4>
+                    <p class="text-gray-600">Qualidade e rapidez para todos os seus documentos e projetos.</p>
+                </div>
+
+                <!-- Service Card: Xerox -->
+                <div class="service-card bg-green-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Copy/Documents -->
+                    <svg class="w-16 h-16 text-green-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Xerox</h4>
+                    <p class="text-gray-600">Cópias nítidas e fiéis, sempre que precisar.</p>
+                </div>
+
+                <!-- Service Card: Plastificação -->
+                <div class="service-card bg-purple-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Laminate/Shield -->
+                    <svg class="w-16 h-16 text-purple-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.928 12c.04.596.08.79.12 1.185.04.394.08.788.12 1.182.04.394.08.788.12 1.182.04.394.08.788.12 1.182a12.007 12.007 0 008.618 3.04A11.955 11.955 0 0112 21.056a11.955 11.955 0 018.618-3.04c.04-.394.08-.788.12-1.182.04-.394.08-.788.12-1.182.04-.394.08-.788.12-1.182a12.007 12.007 0 00-.12-1.182z"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Plastificação</h4>
+                    <p class="text-gray-600">Proteja seus documentos importantes com nossa plastificação de alta qualidade.</p>
+                </div>
+
+                <!-- Service Card: Revelação de Fotos -->
+                <div class="service-card bg-red-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Camera -->
+                    <svg class="w-16 h-16 text-red-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Revelação de Fotos</h4>
+                    <p class="text-gray-600">Transforme suas memórias digitais em fotos impressas.</p>
+                </div>
+
+                <!-- Service Card: Carregadores de iPhone -->
+                <div class="service-card bg-yellow-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Phone with lightning -->
+                    <svg class="w-16 h-16 text-yellow-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V7h-2v3m0 0l-2 2m2-2l2 2"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Carregadores de iPhone (Normal e Tipo C)</h4>
+                    <p class="text-gray-600">Mantenha-se conectado com nossos carregadores de qualidade.</p>
+                </div>
+
+                <!-- Service Card: Edição de Arquivos -->
+                <div class="service-card bg-teal-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Edit Document -->
+                    <svg class="w-16 h-16 text-teal-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Edição de Arquivos</h4>
+                    <p class="text-gray-600">Ajustes e formatação para seus documentos.</p>
+                </div>
+
+                <!-- Service Card: Currículos Profissionais -->
+                <div class="service-card bg-orange-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Resume/Document with person -->
+                    <svg class="w-16 h-16 text-orange-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Currículos Profissionais</h4>
+                    <p class="text-gray-600">Destaque-se no mercado com um currículo bem elaborado.</p>
+                </div>
+
+                <!-- Service Card: Criação de Cardápios e Placas -->
+                <div class="service-card bg-pink-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Menu/Clipboard -->
+                    <svg class="w-16 h-16 text-pink-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Criação de Cardápios e Placas de Aviso</h4>
+                    <p class="text-gray-600">Design personalizado para seu negócio ou evento.</p>
+                </div>
+
+                <!-- Service Card: QR Code de Pix Personalizado -->
+                <div class="service-card bg-indigo-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: QR Code -->
+                    <svg class="w-16 h-16 text-indigo-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v.01M12 8v.01M12 12v.01M12 16v.01M12 20v.01M4 12h.01M8 12h.01M16 12h.01M20 12h.01M4 4h.01M8 4h.01M4 8h.01M8 8h.01M16 4h.01M20 4h.01M16 8h.01M20 8h.01M4 16h.01M8 16h.01M4 20h.01M8 20h.01M16 16h.01M20 16h.01M16 20h.01M20 20h.01"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">QR Code de Pix Personalizado</h4>
+                    <p class="text-gray-600">Facilite seus pagamentos com um QR Code Pix exclusivo.</p>
+                </div>
+
+                <!-- Service Card: E muito mais! -->
+                <div class="service-card bg-gray-100 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <!-- Icon: Plus -->
+                    <svg class="w-16 h-16 text-gray-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">E muito mais!</h4>
+                    <p class="text-gray-600">Venha nos visitar e descubra a variedade de serviços que oferecemos.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location and WhatsApp Section -->
+    <section id="localizacao" class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl font-bold text-gray-800 mb-8">Onde nos Encontrar</h3>
+            <p class="text-2xl text-gray-700 mb-8">
+                <span class="text-blue-600 font-bold">📍</span> Estamos no antigo Lanches Vida, em frente ao Bloco 24.
+            </p>
+            <!-- Google Maps Embed -->
+            <div class="relative w-full max-w-3xl mx-auto rounded-lg shadow-lg overflow-hidden mb-12 h-96">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1156.34474090112!2d-38.35035588704889!3d-12.877820162150142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1751052817214!5m2!1spt-BR!2sbr"
+                        width="100%" height="100%" style="border:0; position:absolute; top:0; left:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Action Button (FAB) -->
+    <a href="https://wa.me/557182919091?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Garagem%20e%20gostaria%20de%20entrar%20em%20contato."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-fab"
+       aria-label="Entre em contato pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-gray-800 text-white py-8 px-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Gráfica LV. Todos os direitos reservados.</p>
+            <p class="mt-2">Endereço: Antigo Lanches Vida, em frente ao Bloco 24, Bairro Brisa.</p>
+            <p class="mt-2">WhatsApp: (71) 8291-9091</p>
+        </div>
+    </footer>
+
+</body>
+</html>
